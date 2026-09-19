@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5F3FF">
+<meta name="description" content="Кривая времени поступления: экзамены, цели и дедлайны до сентября 2030.">
+<title>Курс на 2030</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23D6246E'/%3E%3Cpath d='M14 44 L30 28 L38 36 L50 20' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F3FF; --surf:#FFFFFF; --ink:#17163A; --mut:#625F8A; --line:#E0DBF4; --band:#EDE8FF; --hl:#FFF0B8;
+  --a:#D6246E; --a-t:#FFE1EE; --a-on:#FFFFFF; --a-ink:#7A0F3A;
+  --s:#0A7F7B; --s-t:#D3F2EF; --s-on:#FFFFFF; --s-ink:#054A47;
+  --m:#4F46E5; --gold:#FFB020;
+  --f-disp:"Unbounded","Manrope",system-ui,sans-serif;
+  --f-body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E0D24; --surf:#181738; --ink:#F2F0FF; --mut:#A9A6D6; --line:#302E62; --band:#1F1D45; --hl:#3B3212;
+  --a:#FF6FA3; --a-t:#40142F; --a-on:#2A0A1A; --a-ink:#FFC2D8;
+  --s:#33D6C9; --s-t:#0F3A38; --s-on:#04211F; --s-ink:#9CF0E9; --m:#8F89FF;}}
+:root[data-theme="dark"]{
+  --bg:#0E0D24; --surf:#181738; --ink:#F2F0FF; --mut:#A9A6D6; --line:#302E62; --band:#1F1D45; --hl:#3B3212;
+  --a:#FF6FA3; --a-t:#40142F; --a-on:#2A0A1A; --a-ink:#FFC2D8;
+  --s:#33D6C9; --s-t:#0F3A38; --s-on:#04211F; --s-ink:#9CF0E9; --m:#8F89FF;}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;
+  padding:max(20px,env(safe-area-inset-top)) 16px max(48px,env(safe-area-inset-bottom))}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+button,summary{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--m);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);font-weight:700}
+h1{font-family:var(--f-disp);font-weight:700;font-size:clamp(38px,9vw,68px);line-height:1;margin:6px 0 0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--a)}
+
+/* countdown */
+.cd{background:#14122E;color:#F2F0FF;border-radius:26px;padding:22px 20px;display:flex;flex-direction:column;gap:16px;border:1px solid #2E2C62}
+.cd .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#A9A6D6;font-weight:700}
+.cd .big{font-family:var(--f-disp);font-weight:500;font-size:clamp(28px,7.6vw,46px);line-height:1.1;margin:2px 0 0}
+.cd .big small{font-size:.5em;color:#A9A6D6;font-family:var(--f-body);font-weight:600;margin:0 8px 0 3px}
+.cd .sub{color:#C9C6F0;margin:0;font-size:14px}
+.now2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nt{border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.nt b{font-size:12px;font-weight:700;letter-spacing:.04em}
+.nt span{font-size:14px;font-weight:600;line-height:1.3}
+.nt.a{background:#3A1530;color:#FFD3E3} .nt.a b{color:#FF9CC0}
+.nt.s{background:#0F3A38;color:#C9F7F3} .nt.s b{color:#7CE8DF}
+.soon{border-top:1px solid #2E2C62;padding-top:12px}
+.soon ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.soon li{display:flex;gap:10px;align-items:baseline;font-size:14px}
+.soon li time{font-weight:700;min-width:4.6em;color:#fff}
+.soon li span{color:#C9C6F0}
+.soon li i{font-style:normal;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px;background:#26235C;color:#DCD6FF;margin-left:auto;white-space:nowrap}
+.soon li i.s{background:#0F3A38;color:#7CE8DF}
+
+
+.cd-unis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.cu{background:#1F1D45;border:1px solid #2E2C62;border-radius:16px;padding:14px 16px}
+.cu h3{margin:0 0 4px;font-family:var(--f-disp);font-weight:500;font-size:16px;color:#fff}
+.cu p{margin:0 0 10px;color:#C9C6F0;font-size:13px}
+.cu .chips span{background:#2B2960;color:#EDEBFF}
+.cu .rq{margin-top:10px;font-weight:700;font-size:13px;color:#fff}
+.cu .rq span{color:#A9A6D6;font-weight:600}
+
+/* controls */
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.seg{display:inline-flex;background:var(--surf);border:1px solid var(--line);border-radius:99px;padding:4px;gap:2px}
+.seg button{border:0;background:none;padding:8px 16px;border-radius:99px;font-weight:700;color:var(--mut);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.agebtn{border:1px solid var(--line);background:var(--surf);color:var(--mut);border-radius:99px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer}
+.agebtn[aria-pressed="true"]{border-color:var(--m);color:var(--m)}
+.legend{display:flex;gap:6px 16px;flex-wrap:wrap;font-size:12.5px;color:var(--mut);font-weight:600}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.sw{width:22px;height:12px;border-radius:4px;display:inline-block}
+.sw.p{background:var(--a-t);border:1px solid var(--a)} .sw.x{background:var(--a)} .sw.f{background:var(--surf);border:2px dashed var(--a)}
+
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:14px;position:relative}
+.yr{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.yr.cur{border-color:var(--m);box-shadow:0 0 0 3px color-mix(in srgb,var(--m) 22%,transparent)}
+.yr.uni{background:var(--hl);border-color:transparent}
+.yh{display:flex;gap:8px 12px;align-items:baseline;flex-wrap:wrap;justify-content:space-between}
+.yh h3{margin:0;font-family:var(--f-disp);font-weight:500;font-size:20px}
+.yh .gr{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
+.pill.a{background:var(--a-t);color:var(--a-ink)} .pill.s{background:var(--s-t);color:var(--s-ink)}
+.pill.now{background:var(--m);color:#fff}
+.ages{display:none;margin:0;font-size:11.5px;color:var(--mut);font-weight:600}
+.show-ages .ages{display:block}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.col>h4{margin:0;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.col.a>h4{color:var(--a)} .col.s>h4{color:var(--s)}
+[data-who="A"] .col.s,[data-who="S"] .col.a{display:none}
+[data-who="A"] .cols,[data-who="S"] .cols{grid-template-columns:1fr}
+.it{border-radius:14px;border:1.5px solid transparent;overflow:hidden}
+.it summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;flex-direction:column;gap:1px}
+.it summary::-webkit-details-marker{display:none}
+.it summary strong{font-size:14px;font-weight:700;line-height:1.3}
+.it summary span{font-size:12px;font-weight:600;opacity:.85}
+.it.prep.a{background:var(--a-t);border-color:var(--a);color:var(--a-ink)}
+.it.prep.s{background:var(--s-t);border-color:var(--s);color:var(--s-ink)}
+.it.exam.a{background:var(--a);color:var(--a-on)} .it.exam.s{background:var(--s);color:var(--s-on)}
+.it.dl{background:var(--surf);border:2px dashed;color:var(--ink)} .it.dl.a{border-color:var(--a)} .it.dl.s{border-color:var(--s)}
+.it.rec summary{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.3) 6px 9px)}
+.it[open]{box-shadow:0 0 0 2px var(--ink)}
+.d{padding:4px 12px 12px;font-size:13.5px;line-height:1.5;color:var(--ink);background:var(--surf);margin:0;border-top:1px solid var(--line)}
+.d dl{margin:8px 0 0;display:grid;gap:8px}
+.d dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--mut)}
+.d dd{margin:0}
+.d .bd{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px;margin-top:8px;background:var(--band);color:var(--ink)}
+.d .bd.ver{background:#CFF5D8;color:#0B4A1F} .d .bd.typ{background:#FFE9A8;color:#4A3600} .d .bd.rec{background:#DCD6FF;color:#2A2170}
+.d a{color:var(--m);font-weight:600;margin-right:10px}
+.stage{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.stage h3{margin:0;font-family:var(--f-disp);font-weight:500;font-size:18px}
+.stage p{margin:0;color:var(--mut)}
+.yr.uni .stage p{color:var(--ink)}
+
+/* universities */
+.unis{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.uc{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:18px}
+.uc h3{margin:0 0 4px;font-family:var(--f-disp);font-weight:500;font-size:17px}
+.uc p{margin:0 0 12px;color:var(--mut);font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{padding:4px 10px;border-radius:99px;background:var(--band);font-weight:600;font-size:12.5px}
+.uc .req{margin-top:12px;font-weight:700;font-size:13.5px}
+.uc .req span{color:var(--mut);font-weight:600}
+.foot{color:var(--mut);font-size:12.5px;display:flex;flex-direction:column;gap:6px}
+.foot a{color:var(--m)}
+
+@media (max-width:640px){
+  .cols,.cd-unis{grid-template-columns:1fr}
+  .now2{grid-template-columns:1fr}
+  .soon li i{display:none}
+}
+@media (prefers-reduced-motion:no-preference){.it{transition:box-shadow .15s}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app" data-who="all">
+  <header>
+    <div class="eyebrow">Аружан · Султан · США и Китай</div>
+    <h1>Курс на <em>2030</em></h1>
+  </header>
+
+  <section class="cd" aria-label="Обратный отсчёт">
+    <div>
+      <div class="k">До сентября 2030 · старт университета</div>
+      <div class="big" id="cdBig">—</div>
+      <p class="sub">Оба ребёнка поступают в один год.</p>
+    </div>
+    <div class="now2" id="now2"></div>
+    <div class="cd-unis-wrap"><div class="k">Куда поступаем</div><div class="cd-unis" aria-label="Целевые вузы">
+    <div class="cu">
+      <h3>США</h3>
+      <p>Университеты с need-blind и крупной финансовой помощью (по Handbook №7).</p>
+      <div class="chips"><span>Harvard</span><span>Yale</span><span>Princeton</span><span>MIT</span><span>Amherst</span><span>Duke</span><span>UChicago</span><span>NYU</span></div>
+      <div class="rq"><span>SAT </span>1450–1550+ &nbsp; <span>IELTS </span>7.5–8</div>
+    </div>
+    <div class="cu">
+      <h3>Китай</h3>
+      <p>Сильнейшие вузы страны. Кроме SAT и IELTS нужны CSCA и HSK. Султан подаёт и сюда, и в США.</p>
+      <div class="chips"><span>Tsinghua</span><span>Peking</span><span>Fudan</span><span>Shanghai Jiao Tong</span></div>
+      <div class="rq"><span>SAT </span>1350–1500 &nbsp; <span>IELTS </span>6.5–7.5</div>
+    </div>
+  </div></div>
+    <div class="soon">
+      <div class="k">Ближайшие даты</div>
+      <ul id="soon"></ul>
+    </div>
+  </section>
+
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Показать">
+      <button type="button" data-who="all" aria-pressed="true">Все</button>
+      <button type="button" data-who="A" aria-pressed="false">Аружан</button>
+      <button type="button" data-who="S" aria-pressed="false">Султан</button>
+    </div>
+    <button type="button" class="agebtn" id="ageBtn" aria-pressed="false">Показать возраст семьи</button>
+  </div>
+
+  <div class="legend">
+    <span><i class="sw p"></i>Подготовка</span>
+    <span><i class="sw x"></i>Экзамен</span>
+    <span><i class="sw f"></i>Дедлайн</span>
+    <span>Нажмите на блок — цель, минимальный балл и сроки</span>
+  </div>
+
+  <main class="tl" id="tl"><noscript>Для отображения кривой времени нужен JavaScript.</noscript></main>
+
+
+  <footer class="foot">
+    <div>Метки в блоках: «Ваш план» — из семейной доски; «Проверено» — сверено с источником; «Типовой срок» — ориентир, сверить с сайтом вуза; «Совет» — добавлено при составлении плана.</div>
+    <div>Источники: <a href="https://satsuite.collegeboard.org/sat/dates-deadlines" target="_blank" rel="noopener">College Board — даты SAT</a> · <a href="https://mn.china-embassy.gov.cn/eng/zytz/202510/t20251030_11743700.htm" target="_blank" rel="noopener">Посольство КНР — уведомление о CSCA</a> · <a href="https://www.mandarinzone.com/hsk-test-dates-2026/" target="_blank" rel="noopener">Mandarin Zone — даты HSK 2026</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+var SRC={
+  sat:['College Board — даты SAT','https://satsuite.collegeboard.org/sat/dates-deadlines'],
+  csca:['Посольство КНР — уведомление о CSCA','https://mn.china-embassy.gov.cn/eng/zytz/202510/t20251030_11743700.htm'],
+  hsk:['Mandarin Zone — даты HSK 2026','https://www.mandarinzone.com/hsk-test-dates-2026/']
+};
+var CONF={board:'Ваш план',ver:'Проверено',typ:'Типовой срок — уточнить',rec:'Совет'};
+var INFO={
+ IELTS:{what:'Экзамен по английскому для зарубежных вузов. Шкала 1–9 с шагом 0,5.',target:'7.5 — цель семьи',min:'Ориентиры из Handbook №7: США 7.5–8, Китай 6.5–7.5, Сингапур 7+. Точный минимум задаёт каждый вуз и программа.',note:'Результат стареет: вузы обычно принимают его не старше 2 лет. Поэтому в плане есть повторная сдача летом 2029.'},
+ SAT:{what:'Стандартизированный тест для поступления в США, шкала 400–1600.',target:'1520 — цель семьи',min:'Handbook №7: топ-вузы США — 1450–1550+, вузы Китая — 1350–1500.',deadline:'Сессии 2026/27: 3 окт, 7 нояб, 5 дек, 6 мар, 1 мая, 5 июн. Регистрация закрывается за 2 недели, поздняя — примерно за 10 дней.',note:'Расписание 2028/29 College Board ещё не опубликовало — ориентируйтесь на тот же ритм: август–декабрь и март–июнь.',src:['sat']},
+ HSK:{what:'Официальный экзамен по китайскому языку. С июля 2026 действует стандарт HSK 3.0 — уровней стало 9.',target:'HSK 1–2 → 3 → 4',min:'Проходной балл — 60%: 120 из 200 для уровней 1–2 и 180 из 300 для 3–6. Нужный уровень зависит от языка программы.',deadline:'Даты 2026: 17 окт, 7 нояб, 13 дек. Регистрация онлайн — за 10 дней, бумажный формат — за 27.',note:'После перехода на HSK 3.0 нумерация уровней в требованиях вузов может отличаться от прежней — сверьте перед HSK 4.',src:['hsk']},
+ CSCA:{what:'Единый экзамен для иностранных абитуриентов бакалавриата в Китае: китайский язык, математика, физика, химия (предметы по специальности).',target:'Баллы 0–100 по каждому предмету',min:'Минимум устанавливают вузы. С 2026/27 экзамен нужно пройти до подачи заявки, а к 2028 году вводятся обязательные минимальные стандарты.',deadline:'Пять сессий в год: январь, март, апрель, июнь, декабрь (график 2026). Сроки 2029/30 ещё не объявлены.',note:'Сейчас стоит ¥450 за один предмет, ¥700 за два и более. Регистрация на csca.cn.',src:['csca']},
+ SUMMER:{what:'Практика и опыт для портфолио и эссе.',note:'Выбирайте программу, которая даст проект, а не только сертификат.'},
+ ESSAY:{what:'Основное эссе и дополнительные эссе к заявкам в вузы США.',note:'Первый черновик лучше закончить до лета 2029 — осенью останутся правки.'},
+ PORT:{what:'Проекты, олимпиады, лидерство и внеучебная деятельность.',note:'Handbook №7: к 11 классу — 5–10 активностей и 2–3 лидерских проекта.'},
+ CHN:{what:'Регулярные занятия китайским с промежуточными экзаменами HSK.',note:'Ежегодные занятия до HSK 4: HSK 1–2 (2027) → HSK 3 (2028) → HSK 4 (2029).'},
+ APPUS:{what:'Ранняя подача (EA/ED), обычная (RD), решения и ответ вузу.',note:'Даты у каждого вуза свои — точные сроки сверяйте на их сайтах осенью 2029.'},
+ APPCN:{what:'Заявки в вузы и на стипендии (CSC, Confucius, вузовские).',note:'Сроки заметно различаются по вузам. CSCA нужно сдать до подачи.',src:['csca']},
+ MASTER:{what:'Экзамены и заявки на магистерские программы.',note:'Набор экзаменов (GRE, GMAT, IELTS) зависит от направления — определится ближе ко времени.'}
+};
+/* item: [kind, title, when, INFO key, confidence, overrides] */
+var YEARS=[
+ {y:'2026/27',g:['9 класс','8 класс'],ages:2026,
+  A:[['prep','IELTS: подготовка','весь 9 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Летняя школа','лето 2027','SUMMER','board']],
+  S:[['prep','IELTS: подготовка','весь 8 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Китайский язык: к HSK 1–2','весь 8 класс','CHN','board',{prep:'Занятия китайским до сдачи HSK 1–2 весной 2027.'}],['exam','HSK 1–2','весна 2027','HSK','board',{when:'Весна 2027; ближайшие даты — 17 окт, 7 нояб, 13 дек 2026'}]]},
+ {y:'2027/28',g:['10 класс','9 класс'],ages:2027,
+  A:[['prep','SAT: подготовка','весь 10 класс','SAT','board',{prep:'Цель — 1520.'}],['exam','IELTS 7.5','осень 2027','IELTS','board']],
+  S:[['prep','Китайский язык: к HSK 3','весь 9 класс','CHN','board',{prep:'Занятия китайским до сдачи HSK 3 весной 2028.'}],['prep','SAT: подготовка','весь 9 класс','SAT','board',{prep:'Цель — 1520.'}],['exam','IELTS 7.5','осень 2027','IELTS','board'],['exam','HSK 3','весна 2028','HSK','board']]},
+ {y:'2028/29',g:['11 класс','10 класс'],ages:2028,
+  A:[['prep','Эссе: подготовка','весь 11 класс','ESSAY','board'],['exam','SAT 1520','март–июнь 2029','SAT','board'],['exam','IELTS: повтор','лето 2029','IELTS','rec',{note:'Результат осени 2027 к подаче в ноябре 2029 устареет. Пересдайте летом и оставьте запас на неудачную попытку.'}],['exam','SAT: запасная попытка','авг–окт 2029','SAT','rec',{note:'Если 1520 не получился весной, октябрьский результат ещё успевает к подаче.'}]],
+  S:[['prep','Китайский язык: к HSK 4','до весны 2029','CHN','board',{prep:'Занятия китайским до сдачи HSK 4 весной 2029.'}],['prep','CSCA: подготовка','весь 10 класс','CSCA','board'],['exam','SAT 1520','март–июнь 2029','SAT','board'],['exam','HSK 4','весна 2029','HSK','board'],['exam','IELTS: повтор','лето 2029','IELTS','rec',{note:'Результат осени 2027 к подаче в 2030 устареет. Пересдайте летом 2029.'}]]},
+ {y:'2029/30',g:['12 класс','11 класс'],ages:2029,
+  A:[['prep','Портфолио','лето–осень 2029','PORT','board',{prep:'Должно быть готово к ранней подаче 1 ноября.'}],['dl','Ранняя подача EA/ED','1 ноября 2029','APPUS','typ',{deadline:'Типовой срок для США — 1 ноября. Проверьте на сайте каждого вуза.'}],['dl','Обычная подача RD','январь 2030','APPUS','typ',{deadline:'Обычно 1–15 января; у части вузов другие даты.'}],['dl','Решения вузов','март–апрель 2030','APPUS','typ'],['dl','Ответ вузу','1 мая 2030','APPUS','typ',{deadline:'В США принято отвечать до 1 мая.'}]],
+  S:[['prep','Портфолио','лето–осень 2029','PORT','board'],['prep','Эссе для вузов США','лето–осень 2029','ESSAY','rec',{note:'Добавлено, потому что Султан подаёт и в США: основное эссе и дополнительные эссе нужны к ранней подаче 1 ноября.'}],['exam','CSCA','декабрь 2029 – июнь 2030','CSCA','board'],['dl','США: ранняя подача EA/ED','1 ноября 2029','APPUS','typ',{deadline:'Типовой срок для США — 1 ноября. Проверьте на сайте каждого вуза.'}],['dl','США: обычная подача RD','январь 2030','APPUS','typ',{deadline:'Обычно 1–15 января; у части вузов другие даты.'}],['dl','США: решения вузов','март–апрель 2030','APPUS','typ'],['dl','США: ответ вузу','1 мая 2030','APPUS','typ',{deadline:'В США принято отвечать до 1 мая.'}],['dl','Китай: заявки в вузы','январь–апрель 2030','APPCN','typ',{deadline:'Сроки у вузов и стипендий разные — сверить осенью 2029.'}]]}
+];
+var STAGES=[
+ {t:'2030–2034',h:'Бакалавриат',p:'Старт — сентябрь 2030. Оба поступают в один год.',ages:2030,uni:true},
+ {t:'2033/34',h:'Выпускной год бакалавриата',p:'Экзамены и заявки в магистратуру.',ages:2033,
+  A:[['exam','Экзамены в магистратуру','май–ноябрь 2033','MASTER','board'],['dl','Заявки в магистратуру','декабрь 2033 – январь 2034','MASTER','typ']],
+  S:[['exam','Экзамены в магистратуру','май–ноябрь 2033','MASTER','board'],['dl','Заявки в магистратуру','декабрь 2033 – январь 2034','MASTER','typ']]},
+ {t:'2034–2036',h:'Магистратура',p:'Два года до начала карьеры.',ages:2034},
+ {t:'2036+',h:'Работа',p:'Начало карьеры.',ages:2036}
+];
+/* Возраст на 1 сентября (готовые числа, без дат рождения) */
+var AGES={
+ 2026:{M:45,L:38,A:15,S:13,D:4},2027:{M:46,L:39,A:16,S:14,D:5},2028:{M:47,L:40,A:17,S:15,D:6},
+ 2029:{M:48,L:41,A:18,S:16,D:7},2030:{M:49,L:42,A:19,S:17,D:8},2033:{M:52,L:45,A:22,S:20,D:11},
+ 2034:{M:53,L:46,A:23,S:21,D:12},2036:{M:55,L:48,A:25,S:23,D:14}
+};
+var NAMES={M:'Мурат',L:'Самал',A:'Аружан',S:'Султан',D:'Данель'};
+function ageLine(y){var a=AGES[y];return ['M','L','A','S','D'].map(function(k){return NAMES[k]+' '+a[k];}).join(' · ');}
+function h(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+
+function item(w,it){
+  var kind=it[0],title=it[1],when=it[2],inf=INFO[it[3]]||{},conf=it[4],o=it[5]||{};
+  var rows=[['Что это',inf.what],['Когда',o.when||when],['Цель',o.target||inf.target],['Минимум и ориентиры',o.min||inf.min],['Подготовка',o.prep],['Сроки и дедлайны',o.deadline||inf.deadline],['Важно',o.note||inf.note]];
+  var dl='';rows.forEach(function(r){if(r[1])dl+='<dt>'+r[0]+'</dt><dd>'+h(r[1])+'</dd>';});
+  var srcs=(o.src||inf.src||[]).map(function(k){return '<a href="'+SRC[k][1]+'" target="_blank" rel="noopener">'+SRC[k][0]+'</a>';}).join('');
+  var cls=(conf==='board'?'':conf);
+  return '<details class="it '+kind+' '+w.toLowerCase()+(conf==='rec'?' rec':'')+'"><summary><strong>'+h(title)+'</strong><span>'+h(when)+'</span></summary>'+
+   '<div class="d"><dl>'+dl+'</dl><span class="bd '+cls+'">'+CONF[conf]+'</span>'+(srcs?'<div style="margin-top:8px">'+srcs+'</div>':'')+'</div></details>';
+}
+function col(w,list){
+  if(!list||!list.length)return '';
+  return '<div class="col '+w.toLowerCase()+'"><h4>'+(w==='A'?'Аружан':'Султан')+'</h4>'+list.map(function(it){return item(w,it);}).join('')+'</div>';
+}
+function render(){
+  var now=new Date(),idx=(now.getFullYear()-2026)*12+(now.getMonth()-8);idx=Math.floor(idx/12);
+  var out='';
+  YEARS.forEach(function(Y,i){
+    out+='<article class="yr'+(i===idx?' cur':'')+'"><div class="yh"><h3>'+Y.y+'</h3><div class="gr">'+(i===idx?'<span class="pill now">сейчас</span>':'')+'<span class="pill a">Аружан · '+Y.g[0]+'</span><span class="pill s">Султан · '+Y.g[1]+'</span></div></div>'+
+      '<p class="ages">Возраст на 1 сентября: '+ageLine(Y.ages)+'</p><div class="cols">'+col('A',Y.A)+col('S',Y.S)+'</div></article>';
+  });
+  STAGES.forEach(function(S){
+    var body=(S.A||S.S)?'<div class="cols">'+col('A',S.A)+col('S',S.S)+'</div>':'';
+    out+='<article class="yr'+(S.uni?' uni':'')+'"><div class="stage"><h3>'+S.h+'</h3><span class="pill '+(S.uni?'':'')+'" style="background:var(--band)">'+S.t+'</span></div><p class="'+'" style="margin:0;color:var(--mut)">'+S.p+'</p>'+
+      '<p class="ages">Возраст на 1 сентября '+S.ages+': '+ageLine(S.ages)+'</p>'+body+'</article>';
+  });
+  document.getElementById('tl').innerHTML=out;
+}
+function countdown(){
+  var now=new Date(),t=new Date(2030,8,1);
+  var el=document.getElementById('cdBig');
+  if(now>=t){el.textContent='Уже стартовали';return;}
+  var y=t.getFullYear()-now.getFullYear(),m=t.getMonth()-now.getMonth(),d=t.getDate()-now.getDate();
+  if(d<0){m--;d+=new Date(t.getFullYear(),t.getMonth(),0).getDate();}
+  if(m<0){y--;m+=12;}
+  el.innerHTML=y+'<small>г.</small>'+m+'<small>мес.</small>'+d+'<small>дн.</small>';
+}
+function nowTiles(){
+  var now=new Date(),idx=Math.floor(((now.getFullYear()-2026)*12+(now.getMonth()-8))/12);
+  if(idx<0)idx=0;
+  if(idx>=YEARS.length){document.getElementById('now2').style.display='none';return;}
+  var Y=YEARS[idx];
+  function txt(list){return list.filter(function(i){return i[0]!=='dl';}).slice(0,2).map(function(i){return i[1];}).join(' · ');}
+  document.getElementById('now2').innerHTML=
+   '<div class="nt a"><b>Аружан · '+Y.g[0]+'</b><span>'+h(txt(Y.A))+'</span></div>'+
+   '<div class="nt s"><b>Султан · '+Y.g[1]+'</b><span>'+h(txt(Y.S))+'</span></div>';
+}
+function soon(){
+  var now=new Date();
+  var L=[[new Date(2026,9,17),'HSK','рег. до 7 окт','s'],[new Date(2026,10,7),'HSK','рег. до 28 окт','s'],[new Date(2026,10,7),'SAT','рег. до 23 окт',''],
+         [new Date(2026,11,5),'SAT','рег. до 20 нояб',''],[new Date(2026,11,13),'HSK','рег. до 3 дек','s'],[new Date(2027,2,6),'SAT','рег. до 19 фев',''],
+         [new Date(2027,4,1),'SAT','рег. до 16 апр',''],[new Date(2027,5,5),'SAT','рег. до 21 мая','']];
+  var M=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  var next=L.filter(function(x){return x[0]>=new Date(now.getFullYear(),now.getMonth(),now.getDate());}).slice(0,4);
+  var ul=document.getElementById('soon');
+  if(!next.length){ul.innerHTML='<li><span>Даты 2027/28 ещё не опубликованы.</span></li>';return;}
+  ul.innerHTML=next.map(function(x){return '<li><time>'+x[0].getDate()+' '+M[x[0].getMonth()].slice(0,3)+'.</time><span>'+x[1]+' · '+x[2]+'</span>'+(x[3]==='s'?'<i class="s">Султан</i>':'<i>справка</i>')+'</li>';}).join('');
+}
+var app=document.getElementById('app');
+document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){
+  app.setAttribute('data-who',b.getAttribute('data-who'));
+  document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});});});
+var ab=document.getElementById('ageBtn');
+ab.addEventListener('click',function(){
+  var on=ab.getAttribute('aria-pressed')!=='true';
+  ab.setAttribute('aria-pressed',on?'true':'false');
+  app.classList.toggle('show-ages',on);
+  ab.textContent=on?'Скрыть возраст семьи':'Показать возраст семьи';
+});
+render();countdown();nowTiles();soon();
+})();
+</script>
+</body>
+</html>
