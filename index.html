@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F5F3FF">
 <meta name="description" content="Кривая времени поступления: экзамены, цели и дедлайны до сентября 2030.">
-<title>Курс на 2030</title>
+<title>Подготовка к поступлению в Университет</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23D6246E'/%3E%3Cpath d='M14 44 L30 28 L38 36 L50 20' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);fo
 button,summary{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--m);outline-offset:2px}
 .eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);font-weight:700}
-h1{font-family:var(--f-disp);font-weight:700;font-size:clamp(38px,9vw,68px);line-height:1;margin:6px 0 0;letter-spacing:-.02em}
+h1{font-family:var(--f-disp);font-weight:700;font-size:clamp(26px,6.4vw,46px);line-height:1.1;margin:6px 0 0;letter-spacing:-.02em;overflow-wrap:anywhere}
 h1 em{font-style:normal;color:var(--a)}
 
 /* countdown */
@@ -134,8 +134,36 @@ h1 em{font-style:normal;color:var(--a)}
 .foot{color:var(--mut);font-size:12.5px;display:flex;flex-direction:column;gap:6px}
 .foot a{color:var(--m)}
 
+/* goals of the year */
+.goals{border-radius:18px;background:var(--band);padding:4px 14px 14px}
+.goals>summary{list-style:none;cursor:pointer;display:flex;gap:4px 12px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;padding:10px 0}
+.goals>summary::-webkit-details-marker{display:none}
+.goals>summary span{font-family:var(--f-disp);font-weight:500;font-size:16px}
+.goals>summary span::before{content:"▾ ";color:var(--m)}
+.goals:not([open])>summary span::before{content:"▸ "}
+.goals>summary em{font-style:normal;font-size:11.5px;font-weight:600;color:var(--mut)}
+.gls{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gc{background:var(--surf);border-radius:16px;padding:12px 14px;min-width:0;border-top:4px solid var(--c)}
+.gc.a{--c:var(--a);--ct:var(--a-t);--ci:var(--a-ink)} .gc.s{--c:var(--s);--ct:var(--s-t);--ci:var(--s-ink)}
+[data-who="A"] .gc.s,[data-who="S"] .gc.a{display:none}
+[data-who="A"] .gls,[data-who="S"] .gls{grid-template-columns:1fr}
+.gc h5{margin:0 0 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--c)}
+.gc h5 .cnt{font-size:11.5px;letter-spacing:0;text-transform:none;color:var(--mut);font-weight:700}
+.gc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.g label{display:flex;gap:9px;align-items:flex-start;cursor:pointer}
+.g input{accent-color:var(--c);width:18px;height:18px;margin:1px 0 0;flex:none;cursor:pointer}
+.g .gt b{font-size:14px;line-height:1.35;font-weight:700}
+.g .gt .n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--ct);color:var(--ci);font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.g input:checked~b{text-decoration:line-through;opacity:.55}
+.g ul{list-style:none;margin:6px 0 0 11px;padding:0 0 0 18px;border-left:2px solid var(--ct);display:flex;flex-direction:column;gap:6px}
+.g ul .tag{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:var(--mut);margin-top:2px}
+.g ul label{font-size:13px;line-height:1.35;font-weight:500}
+.g ul input{width:16px;height:16px}
+.g ul input:checked~span{text-decoration:line-through;opacity:.55}
+.g .gn{margin:6px 0 0 31px;font-size:12px;color:var(--mut);font-weight:600;line-height:1.4}
+
 @media (max-width:640px){
-  .cols,.cd-unis{grid-template-columns:1fr}
+  .cols,.cd-unis,.gls{grid-template-columns:1fr}
   .now2{grid-template-columns:1fr}
   .soon li i{display:none}
 }
@@ -146,7 +174,7 @@ h1 em{font-style:normal;color:var(--a)}
 <div class="wrap" id="app" data-who="all">
   <header>
     <div class="eyebrow">Аружан · Султан · США и Китай</div>
-    <h1>Курс на <em>2030</em></h1>
+    <h1>Подготовка к поступлению в <em>Университет</em></h1>
   </header>
 
   <section class="cd" aria-label="Обратный отсчёт">
@@ -226,6 +254,21 @@ var INFO={
 /* item: [kind, title, when, INFO key, confidence, overrides] */
 var YEARS=[
  {y:'2026/27',g:['9 класс','8 класс'],ages:2026,
+  goals:{
+   A:[
+    {t:'Выбрать желаемые университеты',pre:['Пройти профориентацию — определить направление(я) для развития']},
+    {t:'Летняя школа',pre:['Выбрать университет','Определиться со сроками подачи документов','Понять, какой результат IELTS таргетировать и когда']},
+    {t:'Пройти тест IELTS',pre:['Определиться с датой сдачи','Зарегистрироваться'],then:['Подготовка к экзамену'],note:'Первая сдача — весна 2027; цель 7.5 по семейной доске — осень 2027.'},
+    {t:'Прокачать скилл Academic Writing + Research'},
+    {t:'Выбрать 2 новых направления во внешкольной программе'}
+   ],
+   S:[
+    {t:'Выбрать желаемые университеты',pre:['Пройти профориентацию — определить направление(я) для развития'],note:'Султан подаёт и в США, и в Китай.'},
+    {t:'Прокачать китайский язык по уровням HSK 1 + 2',then:['Пройти уровень HSK 1','Пройти уровень HSK 2','Сдать экзамены — к весне 2027'],note:'Ближайшие осенние даты HSK — 7 нояб и 13 дек 2026 (онлайн-регистрация за 10 дней). Весенние даты 2027 ещё не объявлены.'},
+    {t:'Пройти тест IELTS',pre:['Определиться с датой сдачи','Зарегистрироваться'],then:['Подготовка к экзамену'],note:'Первая сдача — весна 2027; цель 7.5 по семейной доске — осень 2027.'},
+    {t:'Прокачать скилл Academic Writing + Research'},
+    {t:'Выбрать 2 новых направления во внешкольной программе'}
+   ]},
   A:[['prep','IELTS: подготовка','весь 9 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Летняя школа','лето 2027','SUMMER','board']],
   S:[['prep','IELTS: подготовка','весь 8 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Китайский язык: к HSK 1–2','весь 8 класс','CHN','board',{prep:'Занятия китайским до сдачи HSK 1–2 весной 2027.'}],['exam','HSK 1–2','весна 2027','HSK','board',{when:'Весна 2027; ближайшие даты — 17 окт, 7 нояб, 13 дек 2026'}]]},
  {y:'2027/28',g:['10 класс','9 класс'],ages:2027,
@@ -269,12 +312,48 @@ function col(w,list){
   if(!list||!list.length)return '';
   return '<div class="col '+w.toLowerCase()+'"><h4>'+(w==='A'?'Аружан':'Султан')+'</h4>'+list.map(function(it){return item(w,it);}).join('')+'</div>';
 }
+var GKEY='kurs2030.goals',GST={};
+try{GST=JSON.parse(localStorage.getItem(GKEY)||'{}')||{};}catch(e){GST={};}
+function gsave(){try{localStorage.setItem(GKEY,JSON.stringify(GST));}catch(e){}}
+function goalsHtml(Y){
+  var G=Y.goals;if(!G)return '';
+  function cb(id,cls){return '<input type="checkbox" class="'+cls+'" data-k="'+h(id)+'"'+(GST[id]?' checked':'')+'>';}
+  var o='<details class="goals" open><summary><span>Цели на '+Y.y+'</span><em>Отметки сохраняются только в этом браузере</em></summary><div class="gls">';
+  [['A','Аружан'],['S','Султан']].forEach(function(p){
+    var L=G[p[0]];if(!L)return;
+    o+='<div class="gc '+p[0].toLowerCase()+'"><h5>'+p[1]+'<span class="cnt"></span></h5><ol>';
+    L.forEach(function(g,gi){
+      var id=Y.y+'|'+p[0]+'|'+gi;
+      o+='<li class="g"><label class="gt">'+cb(id,'gk')+'<span class="n">'+(gi+1)+'</span><b>'+h(g.t)+'</b></label>';
+      if((g.pre&&g.pre.length)||(g.then&&g.then.length)){
+        o+='<ul>';
+        function grp(tag,arr,off){
+          if(!arr||!arr.length)return;
+          o+='<li class="tag">'+tag+'</li>';
+          arr.forEach(function(s,si){o+='<li><label>'+cb(id+'|'+(off+si),'sk')+'<span>'+h(s)+'</span></label></li>';});
+        }
+        grp('Сначала',g.pre,0);grp('Затем',g.then,10);
+        o+='</ul>';
+      }
+      if(g.note)o+='<p class="gn">'+h(g.note)+'</p>';
+      o+='</li>';
+    });
+    o+='</ol></div>';
+  });
+  return o+'</div></details>';
+}
+function gcount(){
+  document.querySelectorAll('.gc').forEach(function(c){
+    var all=c.querySelectorAll('input.gk'),done=c.querySelectorAll('input.gk:checked');
+    c.querySelector('.cnt').textContent='выполнено '+done.length+' из '+all.length;
+  });
+}
 function render(){
   var now=new Date(),idx=(now.getFullYear()-2026)*12+(now.getMonth()-8);idx=Math.floor(idx/12);
   var out='';
   YEARS.forEach(function(Y,i){
     out+='<article class="yr'+(i===idx?' cur':'')+'"><div class="yh"><h3>'+Y.y+'</h3><div class="gr">'+(i===idx?'<span class="pill now">сейчас</span>':'')+'<span class="pill a">Аружан · '+Y.g[0]+'</span><span class="pill s">Султан · '+Y.g[1]+'</span></div></div>'+
-      '<p class="ages">Возраст на 1 сентября: '+ageLine(Y.ages)+'</p><div class="cols">'+col('A',Y.A)+col('S',Y.S)+'</div></article>';
+      '<p class="ages">Возраст на 1 сентября: '+ageLine(Y.ages)+'</p>'+goalsHtml(Y)+'<div class="cols">'+col('A',Y.A)+col('S',Y.S)+'</div></article>';
   });
   STAGES.forEach(function(S){
     var body=(S.A||S.S)?'<div class="cols">'+col('A',S.A)+col('S',S.S)+'</div>':'';
@@ -282,7 +361,14 @@ function render(){
       '<p class="ages">Возраст на 1 сентября '+S.ages+': '+ageLine(S.ages)+'</p>'+body+'</article>';
   });
   document.getElementById('tl').innerHTML=out;
+  gcount();
 }
+document.getElementById('tl').addEventListener('change',function(e){
+  var t=e.target;if(!t||t.type!=='checkbox'||!t.getAttribute('data-k'))return;
+  var k=t.getAttribute('data-k');
+  if(t.checked)GST[k]=1;else delete GST[k];
+  gsave();gcount();
+});
 function countdown(){
   var now=new Date(),t=new Date(2030,8,1);
   var el=document.getElementById('cdBig');
