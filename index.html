@@ -115,7 +115,7 @@ h1 em{font-style:normal;color:var(--a)}
 .d dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--mut)}
 .d dd{margin:0}
 .d .bd{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px;margin-top:8px;background:var(--band);color:var(--ink)}
-.d .bd.ver{background:#CFF5D8;color:#0B4A1F} .d .bd.typ{background:#FFE9A8;color:#4A3600} .d .bd.rec{background:#DCD6FF;color:#2A2170}
+.d .bd.ver{background:#CFF5D8;color:#0B4A1F} .d .bd.typ{background:#FFE9A8;color:#4A3600} .d .bd.rec{background:#DCD6FF;color:#2A2170} .d .bd.prof{background:#CDEBFF;color:#0B3A5C}
 .d a{color:var(--m);font-weight:600;margin-right:10px}
 .stage{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .stage h3{margin:0;font-family:var(--f-disp);font-weight:500;font-size:18px}
@@ -190,6 +190,7 @@ h1 em{font-style:normal;color:var(--a)}
       <p>Университеты с need-blind и крупной финансовой помощью (по Handbook №7).</p>
       <div class="chips"><span>Harvard</span><span>Yale</span><span>Princeton</span><span>MIT</span><span>Amherst</span><span>Duke</span><span>UChicago</span><span>NYU</span></div>
       <div class="rq"><span>SAT </span>1450–1550+ &nbsp; <span>IELTS </span>7.5–8</div>
+      <div class="rq"><span>Аружан, направление (гипотеза) </span>менеджмент и бизнес, гостиничное дело, маркетинг и коммуникации</div>
     </div>
     <div class="cu">
       <h3>Китай</h3>
@@ -224,7 +225,7 @@ h1 em{font-style:normal;color:var(--a)}
 
 
   <footer class="foot">
-    <div>Метки в блоках: «Ваш план» — из семейной доски; «Проверено» — сверено с источником; «Типовой срок» — ориентир, сверить с сайтом вуза; «Совет» — добавлено при составлении плана.</div>
+    <div>Метки в блоках: «Ваш план» — из семейной доски; «Проверено» — сверено с источником; «Типовой срок» — ориентир, сверить с сайтом вуза; «Совет» — добавлено при составлении плана; «Из профориентации» — вывод консультации 9 ноября 2026.</div>
     <div>Источники: <a href="https://satsuite.collegeboard.org/sat/dates-deadlines" target="_blank" rel="noopener">College Board — даты SAT</a> · <a href="https://mn.china-embassy.gov.cn/eng/zytz/202510/t20251030_11743700.htm" target="_blank" rel="noopener">Посольство КНР — уведомление о CSCA</a> · <a href="https://www.mandarinzone.com/hsk-test-dates-2026/" target="_blank" rel="noopener">Mandarin Zone — даты HSK 2026</a></div>
   </footer>
 </div>
@@ -237,7 +238,7 @@ var SRC={
   csca:['Посольство КНР — уведомление о CSCA','https://mn.china-embassy.gov.cn/eng/zytz/202510/t20251030_11743700.htm'],
   hsk:['Mandarin Zone — даты HSK 2026','https://www.mandarinzone.com/hsk-test-dates-2026/']
 };
-var CONF={board:'Ваш план',ver:'Проверено',typ:'Типовой срок — уточнить',rec:'Совет'};
+var CONF={board:'Ваш план',ver:'Проверено',typ:'Типовой срок — уточнить',rec:'Совет',prof:'Из профориентации'};
 var INFO={
  IELTS:{what:'Экзамен по английскому для зарубежных вузов. Шкала 1–9 с шагом 0,5.',target:'7.5 — цель семьи',min:'Ориентиры из Handbook №7: США 7.5–8, Китай 6.5–7.5, Сингапур 7+. Точный минимум задаёт каждый вуз и программа.',note:'Результат стареет: вузы обычно принимают его не старше 2 лет. Поэтому в плане есть повторная сдача летом 2029.'},
  SAT:{what:'Стандартизированный тест для поступления в США, шкала 400–1600.',target:'1520 — цель семьи',min:'Handbook №7: топ-вузы США — 1450–1550+, вузы Китая — 1350–1500.',deadline:'Сессии 2026/27: 3 окт, 7 нояб, 5 дек, 6 мар, 1 мая, 5 июн. Регистрация закрывается за 2 недели, поздняя — примерно за 10 дней.',note:'Расписание 2028/29 College Board ещё не опубликовало — ориентируйтесь на тот же ритм: август–декабрь и март–июнь.',src:['sat']},
@@ -249,6 +250,10 @@ var INFO={
  CHN:{what:'Регулярные занятия китайским с промежуточными экзаменами HSK.',note:'Ежегодные занятия до HSK 4: HSK 1–2 (2027) → HSK 3 (2028) → HSK 4 (2029).'},
  APPUS:{what:'Ранняя подача (EA/ED), обычная (RD), решения и ответ вузу.',note:'Даты у каждого вуза свои — точные сроки сверяйте на их сайтах осенью 2029.'},
  APPCN:{what:'Заявки в вузы и на стипендии (CSC, Confucius, вузовские).',note:'Сроки заметно различаются по вузам. CSCA нужно сдать до подачи.',src:['csca']},
+ ORIENT:{what:'Проверка на практике основного направления из профориентации 9 ноября: организовывать и вести людей в среде с понятными правилами.',prep:'Роль в школьном самоуправлении и дебатах на весь год. Своё дело от идеи до итога: ярмарка или мини-бизнес с её керамикой и вязаными вещами (команда, бюджет, продвижение, итоги). Олимпиада по экономике — пройти сезон и честно оценить.',note:'Это гипотеза на год, а не выбор профессии. Плавание, рисование, вязание и гончарное дело остаются для сил и радости, без давления результатом.'},
+ ORIENT2:{what:'Повторное прохождение профориентационных тестов.',note:'Спикер советует проходить их заново каждый год и сравнивать. Интересы в 15–16 лет ещё меняются: результат — ориентир, а не приговор.'},
+ IBDP:{what:'Выбор предметов программы IB Diploma.',note:'Главный кандидат — Business Management. Математику оставить: бизнес-программы её обычно требуют. Visual Arts — только если творческая линия останется сильной. Сроки выбора предметов уточнить в школе.'},
+ INTERN:{what:'Волонтёрство или стажировка в отеле, ивент-агентстве или HR-отделе компании.',note:'Показывает профессию изнутри и может дать рекомендательное письмо. Спикер советует 10–11 класс.'},
  MASTER:{what:'Экзамены и заявки на магистерские программы.',note:'Набор экзаменов (GRE, GMAT, IELTS) зависит от направления — определится ближе ко времени.'}
 };
 /* item: [kind, title, when, INFO key, confidence, overrides] */
@@ -256,11 +261,12 @@ var YEARS=[
  {y:'2026/27',g:['9 класс','8 класс'],ages:2026,
   goals:{
    A:[
-    {t:'Выбрать желаемые университеты',pre:['Пройти профориентацию — определить направление(я) для развития']},
+    {t:'Выбрать желаемые университеты',pre:[{x:'Пройти профориентацию — определить направление(я) для развития (пройдена 9 ноября)',done:1}],then:['Решить, в какой стране поступать: США, Великобритания, Европа или Казахстан','Подобрать программы: менеджмент и бизнес, гостиничное дело, маркетинг и коммуникации'],note:'Итог профориентации: основное направление — организовывать и вести людей (проектный и операционный менеджмент, мероприятия, гостеприимство, HR, маркетинг). Запасное — управление в творческих индустриях, второй план — психология и педагогика. В США много значит внеклассная деятельность, в Великобритании и Европе — баллы IB и профильные предметы.'},
     {t:'Летняя школа',pre:['Выбрать университет','Определиться со сроками подачи документов','Понять, какой результат IELTS таргетировать и когда']},
     {t:'Пройти тест IELTS',pre:['Определиться с датой сдачи','Зарегистрироваться'],then:['Подготовка к экзамену'],note:'Первая сдача — весна 2027; цель 7.5 по семейной доске — осень 2027.'},
     {t:'Прокачать скилл Academic Writing + Research'},
-    {t:'Выбрать 2 новых направления во внешкольной программе'}
+    {t:'Выбрать 2 новых направления во внешкольной программе',cand:['Школьное самоуправление и дебаты — роль на весь учебный год (Аружан согласилась)','Свой проект от идеи до итога — ярмарка или мини-бизнес с керамикой и вязаными вещами','Олимпиада по экономике — пройти сезон и честно оценить'],note:'Варианты из профориентации. Плавание, рисование, вязание и гончарное дело остаются для сил и радости, без давления результатом.'},
+    {t:'Подготовить решение по предметам IB DP',then:['Раз в 3 месяца — семейный разговор из трёх вопросов: что хотелось делать без напоминаний; после чего устала, но довольна; в чём получается лучше других','К выбору предметов принять решение вместе'],note:'Главный кандидат — Business Management; математику оставить. Visual Arts — только если творческая линия останется сильной. Через год пройти тесты профориентации заново.'}
    ],
    S:[
     {t:'Выбрать желаемые университеты',pre:['Пройти профориентацию — определить направление(я) для развития'],note:'Султан подаёт и в США, и в Китай.'},
@@ -269,10 +275,10 @@ var YEARS=[
     {t:'Прокачать скилл Academic Writing + Research'},
     {t:'Выбрать 2 новых направления во внешкольной программе'}
    ]},
-  A:[['prep','IELTS: подготовка','весь 9 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Летняя школа','лето 2027','SUMMER','board']],
+  A:[['prep','IELTS: подготовка','весь 9 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Летняя школа','лето 2027','SUMMER','board'],['prep','Практика: организатор и лидер','весь 9 класс','ORIENT','prof']],
   S:[['prep','IELTS: подготовка','весь 8 класс','IELTS','board',{prep:'Цель — выйти на 7.5 к осени 2027.'}],['prep','Китайский язык: к HSK 1–2','весь 8 класс','CHN','board',{prep:'Занятия китайским до сдачи HSK 1–2 весной 2027.'}],['exam','HSK 1–2','весна 2027','HSK','board',{when:'Весна 2027; ближайшие даты — 17 окт, 7 нояб, 13 дек 2026'}]]},
  {y:'2027/28',g:['10 класс','9 класс'],ages:2027,
-  A:[['prep','SAT: подготовка','весь 10 класс','SAT','board',{prep:'Цель — 1520.'}],['exam','IELTS 7.5','осень 2027','IELTS','board']],
+  A:[['prep','SAT: подготовка','весь 10 класс','SAT','board',{prep:'Цель — 1520.'}],['exam','IELTS 7.5','осень 2027','IELTS','board'],['dl','Профориентация: тесты заново','осень 2027','ORIENT2','prof'],['dl','Выбор предметов IB DP','срок уточнить в школе','IBDP','typ'],['prep','Волонтёрство или стажировка','10–11 класс','INTERN','prof']],
   S:[['prep','Китайский язык: к HSK 3','весь 9 класс','CHN','board',{prep:'Занятия китайским до сдачи HSK 3 весной 2028.'}],['prep','SAT: подготовка','весь 9 класс','SAT','board',{prep:'Цель — 1520.'}],['exam','IELTS 7.5','осень 2027','IELTS','board'],['exam','HSK 3','весна 2028','HSK','board']]},
  {y:'2028/29',g:['11 класс','10 класс'],ages:2028,
   A:[['prep','Эссе: подготовка','весь 11 класс','ESSAY','board'],['exam','SAT 1520','март–июнь 2029','SAT','board'],['exam','IELTS: повтор','лето 2029','IELTS','rec',{note:'Результат осени 2027 к подаче в ноябре 2029 устареет. Пересдайте летом и оставьте запас на неудачную попытку.'}],['exam','SAT: запасная попытка','авг–окт 2029','SAT','rec',{note:'Если 1520 не получился весной, октябрьский результат ещё успевает к подаче.'}]],
@@ -301,7 +307,7 @@ function h(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 
 function item(w,it){
   var kind=it[0],title=it[1],when=it[2],inf=INFO[it[3]]||{},conf=it[4],o=it[5]||{};
-  var rows=[['Что это',inf.what],['Когда',o.when||when],['Цель',o.target||inf.target],['Минимум и ориентиры',o.min||inf.min],['Подготовка',o.prep],['Сроки и дедлайны',o.deadline||inf.deadline],['Важно',o.note||inf.note]];
+  var rows=[['Что это',inf.what],['Когда',o.when||when],['Цель',o.target||inf.target],['Минимум и ориентиры',o.min||inf.min],['Подготовка',o.prep||inf.prep],['Сроки и дедлайны',o.deadline||inf.deadline],['Важно',o.note||inf.note]];
   var dl='';rows.forEach(function(r){if(r[1])dl+='<dt>'+r[0]+'</dt><dd>'+h(r[1])+'</dd>';});
   var srcs=(o.src||inf.src||[]).map(function(k){return '<a href="'+SRC[k][1]+'" target="_blank" rel="noopener">'+SRC[k][0]+'</a>';}).join('');
   var cls=(conf==='board'?'':conf);
@@ -317,22 +323,22 @@ try{GST=JSON.parse(localStorage.getItem(GKEY)||'{}')||{};}catch(e){GST={};}
 function gsave(){try{localStorage.setItem(GKEY,JSON.stringify(GST));}catch(e){}}
 function goalsHtml(Y){
   var G=Y.goals;if(!G)return '';
-  function cb(id,cls){return '<input type="checkbox" class="'+cls+'" data-k="'+h(id)+'"'+(GST[id]?' checked':'')+'>';}
+  function cb(id,cls,def){var on=Object.prototype.hasOwnProperty.call(GST,id)?GST[id]==1:!!def;return '<input type="checkbox" class="'+cls+'" data-k="'+h(id)+'"'+(on?' checked':'')+'>';}
   var o='<details class="goals" open><summary><span>Цели на '+Y.y+'</span><em>Отметки сохраняются только в этом браузере</em></summary><div class="gls">';
   [['A','Аружан'],['S','Султан']].forEach(function(p){
     var L=G[p[0]];if(!L)return;
     o+='<div class="gc '+p[0].toLowerCase()+'"><h5>'+p[1]+'<span class="cnt"></span></h5><ol>';
     L.forEach(function(g,gi){
       var id=Y.y+'|'+p[0]+'|'+gi;
-      o+='<li class="g"><label class="gt">'+cb(id,'gk')+'<span class="n">'+(gi+1)+'</span><b>'+h(g.t)+'</b></label>';
-      if((g.pre&&g.pre.length)||(g.then&&g.then.length)){
+      o+='<li class="g"><label class="gt">'+cb(id,'gk',g.done)+'<span class="n">'+(gi+1)+'</span><b>'+h(g.t)+'</b></label>';
+      if((g.pre&&g.pre.length)||(g.cand&&g.cand.length)||(g.then&&g.then.length)){
         o+='<ul>';
         function grp(tag,arr,off){
           if(!arr||!arr.length)return;
           o+='<li class="tag">'+tag+'</li>';
-          arr.forEach(function(s,si){o+='<li><label>'+cb(id+'|'+(off+si),'sk')+'<span>'+h(s)+'</span></label></li>';});
+          arr.forEach(function(s,si){var x=typeof s==='string'?s:s.x,d=typeof s==='string'?0:s.done;o+='<li><label>'+cb(id+'|'+(off+si),'sk',d)+'<span>'+h(x)+'</span></label></li>';});
         }
-        grp('Сначала',g.pre,0);grp('Затем',g.then,10);
+        grp('Сначала',g.pre,0);grp('Варианты из профориентации',g.cand,20);grp('Затем',g.then,10);
         o+='</ul>';
       }
       if(g.note)o+='<p class="gn">'+h(g.note)+'</p>';
@@ -366,7 +372,7 @@ function render(){
 document.getElementById('tl').addEventListener('change',function(e){
   var t=e.target;if(!t||t.type!=='checkbox'||!t.getAttribute('data-k'))return;
   var k=t.getAttribute('data-k');
-  if(t.checked)GST[k]=1;else delete GST[k];
+  GST[k]=t.checked?1:0;
   gsave();gcount();
 });
 function countdown(){
